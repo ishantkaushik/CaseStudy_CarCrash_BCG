@@ -9,3 +9,4 @@ zip -r src.zip transform.py utils.py loadfiles.py
 
 
 spark-submit --master local --py-files src.zip --files config.yaml app.py
+
