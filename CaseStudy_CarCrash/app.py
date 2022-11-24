@@ -1,17 +1,8 @@
 from pyspark.sql import SparkSession, Window
 from pyspark.sql.functions import col, row_number
 from loadfiles import from_files
-import os
-import sys
 import transform
-
-if os.path.exists('src.zip'):
-    sys.path.insert(0, 'src.zip')
-else:
-    sys.path.insert(0, './Code/src')
-
 import utils
-
 
 class CarCrashAnalysis:
     def __init__(self, yaml_config_file):
